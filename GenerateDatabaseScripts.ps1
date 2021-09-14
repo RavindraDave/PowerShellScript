@@ -1,6 +1,7 @@
-$ServerName='FINIQ434'# the server it is on
-$Database='UOBFX_Rates' # the name of the database you want to script as objects
-$DirectoryToSaveTo='F:\DatabaseCompare\UOBFX' # the directory where you want to store them
+$ServerName='TestServer'# the server it is on
+$Database='MyDatabase' # the name of the database you want to script as objects
+$DirectoryToSaveTo='F:\DatabaseCompare\TestServerDatabase' # the directory where you want to store them
+
 # Load SMO assembly, and if we're running SQL 2008 DLLs load the SMOExtended and SQLWMIManagement libraries
 $v = [System.Reflection.Assembly]::LoadWithPartialName( 'Microsoft.SqlServer.SMO')
 if ((($v.FullName.Split(','))[1].Split('='))[1].Split('.')[0] -ne '9') {
